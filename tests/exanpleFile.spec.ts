@@ -18,7 +18,7 @@ test.describe('SauceDemo Login', () => {
   });
 
   // 2. Negative - wrong password
-  test('Invalid password', async ({ page }) => {
+  test('Invalid password',{tag: ['@smoke']}, async ({ page }) => {
     await page.getByTestId('username').fill('standard_user');
     await page.getByTestId('password').fill('wrong_pass');
     await page.getByTestId('login-button').click();
