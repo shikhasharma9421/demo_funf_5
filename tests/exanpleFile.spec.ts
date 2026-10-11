@@ -38,7 +38,7 @@ test.describe('SauceDemo Login', () => {
   });
 
   // 4. Validation - empty username
-  test('Empty username', async ({ page }) => {
+  test('Empty username',{tag: ['@smoke']}, async ({ page }) => {
     await page.getByTestId('password').fill('secret_sauce');
     await page.getByTestId('login-button').click();
 
@@ -46,7 +46,7 @@ test.describe('SauceDemo Login', () => {
   });
 
   // 5. Validation - empty password
-  test('Empty password', async ({ page }) => {
+  test('Empty password',{tag: ['@smoke']}, async ({ page }) => {
     await page.getByTestId('username').fill('standard_user');
     await page.getByTestId('login-button').click();
 
@@ -54,13 +54,12 @@ test.describe('SauceDemo Login', () => {
   });
 
   // 6. Business rule - locked user
-  test('Locked out user', async ({ page }) => {
+  test('Locked out user', {tag: ['@smoke', '@regression']}, async ({ page }) => {
     await page.getByTestId('username').fill('locked_out_user');
     await page.getByTestId('password').fill('secret_sauce');
     await page.getByTestId('login-button').click();
 
     await expect(page.getByTestId('error')).toContainText('locked out');
   });
-
 
 });
