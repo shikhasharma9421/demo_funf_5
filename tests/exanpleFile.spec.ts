@@ -54,7 +54,7 @@ test.describe('SauceDemo Login', () => {
   });
 
   // 6. Business rule - locked user
-  test('Locked out user', {tag: ['@smoke', '@regression']}, async ({ page }) => {
+  test('Locked out user', {tag: ['@regression']}, async ({ page }) => {
     await page.locator('[data-test="username"]').fill('locked_out_user');
     await page.locator('[data-test="password"]').fill('secret_sauce');
     await page.locator('[data-test="login-button"]').click();
