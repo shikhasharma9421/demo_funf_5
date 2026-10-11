@@ -8,7 +8,7 @@ test.describe('SauceDemo Login', () => {
   });
 
   // 1. Positive
-  test('Valid login test', async ({ page }) => {
+  test('Valid login test', {tag: ['@smoke']}, async ({ page }) => {
     await page.getByTestId('username').fill('standard_user');
     await page.getByTestId('password').fill('secret_sauce');
     await page.getByTestId('login-button').click();
@@ -29,7 +29,7 @@ test.describe('SauceDemo Login', () => {
   });
 
   // 3. Negative - wrong username
-  test('Invalid username', async ({ page }) => {
+  test('Invalid username',{tag: ['@smoke']}, async ({ page }) => {
     await page.getByTestId('username').fill('wrong_user');
     await page.getByTestId('password').fill('secret_sauce');
     await page.getByTestId('login-button').click();
