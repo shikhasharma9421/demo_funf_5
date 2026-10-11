@@ -1,0 +1,16 @@
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="20.40307">
+<testsuite name="exanpleFile.spec.ts" timestamp="2026-10-11T09:27:24.795Z" hostname="chromium" tests="6" failures="0" skipped="0" time="64.113" errors="0">
+<testcase name="SauceDemo Login › Valid login test" classname="exanpleFile.spec.ts" time="10.821">
+</testcase>
+<testcase name="SauceDemo Login › Invalid password" classname="exanpleFile.spec.ts" time="10.719">
+</testcase>
+<testcase name="SauceDemo Login › Invalid username" classname="exanpleFile.spec.ts" time="10.734">
+</testcase>
+<testcase name="SauceDemo Login › Empty username" classname="exanpleFile.spec.ts" time="10.704">
+</testcase>
+<testcase name="SauceDemo Login › Empty password" classname="exanpleFile.spec.ts" time="10.639">
+</testcase>
+<testcase name="SauceDemo Login › Locked out user" classname="exanpleFile.spec.ts" time="10.496">
+</testcase>
+</testsuite>
+</testsuites>
